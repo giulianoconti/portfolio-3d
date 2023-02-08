@@ -19,8 +19,11 @@ export const App = () => {
   const lightRef = useRef();
   let lastScrollTop = 0;
 
-  // wait for model to load
   useEffect(() => {
+    // set vh for mobile
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty("--vh", `${vh}px`);
+    // wait for model to load
     const dracoLoader = new DRACOLoader();
     dracoLoader.setDecoderPath("draco/");
     const gltfLoader = new GLTFLoader();
@@ -45,7 +48,6 @@ export const App = () => {
         lightRef.current.position.z = 10 - scrollYAverage * 60;
         if (width <= 1100) {
           cameraRef.current.position.z = -scrollYAverage * 60;
-
           if (scrollYAverage < 1.52) {
             cameraRef.current.position.x = 20;
             cameraRef.current.position.y = 35;
