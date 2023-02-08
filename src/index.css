@@ -1,0 +1,606 @@
+* {
+  border: none;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  background-color: rgb(255, 199, 123);
+  height: 100%;
+  height: calc(var(--vh, 1vh) * 100);
+  overflow: hidden;
+  width: 100%;
+}
+
+/* ---------------------------------------------------------------------- FOR ALL -------------------------------------------------------------------- */
+
+section {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+  justify-content: start;
+  left: -640px;
+  margin: 0 auto;
+  max-width: 500px;
+  overflow: hidden;
+  padding-top: 48px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.loading {
+  align-items: center;
+  background-color: rgb(255, 199, 123);
+  display: flex;
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+  justify-content: center;
+  width: 100%;
+}
+
+.loading_spinner {
+  animation: spin 1.5s linear infinite;
+  border-radius: 50%;
+  border: 8px ridge rgb(255, 156, 46);
+  height: 96px;
+  padding: 16px;
+  width: 96px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* ----------------------------------------------------------------------NAVBAR ---------------------------------------------------------------------- */
+
+.navbar {
+  height: 48px;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 20;
+}
+
+.nav_container {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  margin: 0 auto;
+  max-width: 1140px;
+  width: 100%;
+}
+
+.nav_logo {
+  background-color: rgb(0, 0, 0);
+  fill: rgb(0, 0, 0);
+  border-radius: 4px;
+  padding: 4px;
+  height: 32px;
+  width: 32px;
+}
+
+.nav_list {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  margin-right: 32px;
+}
+
+.nav_item {
+  margin-left: 32px;
+}
+
+.nav_link {
+  color: rgb(0, 0, 0);
+  display: flex;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+/* ---------------------------------------------------------------- SECTION 1 ( HOME ) --------------------------------------------------------------- */
+
+#home {
+  top: 0vh;
+  top: calc(var(--vh, 1vh) * 0);
+}
+
+.home_title {
+  color: rgb(0, 0, 0);
+  font-size: 64px;
+  font-weight: 700;
+  margin-top: 200px;
+}
+
+.home_text {
+  color: rgb(0, 0, 0);
+  font-size: 24px;
+  font-weight: 400;
+  margin-bottom: 16px;
+}
+
+.home_btn {
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  border-radius: 4px;
+  border: 1px solid rgb(200, 200, 200);
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  display: flex;
+  font-size: 16px;
+  font-weight: 700;
+  height: 48px;
+  justify-content: center;
+  outline: none;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  width: 200px;
+}
+
+.home_btn_text {
+  margin-left: 8px;
+}
+
+/* ---------------------------------------------------------------- SECTION 2 ( ABOUT ) --------------------------------------------------------------- */
+
+#about {
+  padding-top: 64px;
+  top: 100vh;
+  top: calc(var(--vh, 1vh) * 100);
+}
+
+.about_container {
+  max-width: 500px;
+  width: 100%;
+}
+
+.about_polygons {
+  fill: rgb(200, 200, 200);
+  stroke: rgb(0, 0, 0);
+}
+
+.about_img {
+  height: 80px;
+  width: 80px;
+}
+
+.about_text_s {
+  fill: rgb(0, 0, 0);
+  font-family: Roboto, Orbitron, sans-serif;
+  font-size: 12px;
+}
+
+.about_text_s tspan {
+  fill: rgb(0, 0, 0);
+  font-family: Roboto, Orbitron, sans-serif;
+  font-size: 12px;
+}
+
+.about_text_l {
+  fill: rgb(0, 0, 0);
+  font-family: Roboto, Orbitron, sans-serif;
+  font-size: 16px;
+}
+
+.about_text_l tspan {
+  fill: rgb(0, 0, 0);
+  font-family: Roboto, Orbitron, sans-serif;
+  font-size: 16px;
+}
+
+.about_rect_per {
+  fill: rgb(255, 156, 46);
+  stroke: rgb(0, 0, 0);
+}
+
+.about_rect_mis {
+  fill: rgb(0, 0, 0);
+  stroke: rgb(0, 0, 0);
+}
+
+/* -------------------------------------------------------------- SECTION 3 ( PROJECTS ) -------------------------------------------------------------- */
+
+#projects {
+  height: 0;
+  top: 200vh;
+  top: calc(var(--vh, 1vh) * 200);
+}
+
+.projects_container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  width: 960px;
+}
+
+.projects_btns_container {
+  display: flex;
+  justify-content: space-between;
+  margin: 16px 0;
+  padding: 0 16px;
+  width: 100%;
+}
+
+.projects_btn {
+  background-color: rgb(255, 255, 255);
+  border-radius: 4px;
+  border: 1px solid rgb(200, 200, 200);
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 700;
+  height: 48px;
+  outline: none;
+  transition: all 0.3s ease;
+  width: 200px;
+}
+
+.projects_title {
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.projects_list {
+  display: flex;
+  list-style: none;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 0;
+  scroll-behavior: smooth;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.project {
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgb(50, 50, 50);
+  display: flex;
+  justify-content: center;
+  margin: 16px;
+  padding: 16px;
+  width: 928px;
+}
+
+.project_img {
+  height: 350px;
+  width: 728px;
+}
+
+.project_info {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  padding: 16px;
+  width: 200px;
+}
+
+.project_title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.project_description {
+  color: rgb(66, 66, 66);
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 16px;
+}
+
+.project_links {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  margin: 0 24px 0 0;
+  padding: 0;
+}
+
+.project_link_svg {
+  color: rgb(50, 50, 50);
+  height: 40px;
+  transition: all 0.3s ease;
+  width: 40px;
+}
+
+/* --------------------------------------------------------------- SECTION 4 ( CONTACT ) -------------------------------------------------------------- */
+
+#contact {
+  top: 300vh;
+  top: calc(var(--vh, 1vh) * 300);
+}
+
+#order_contact {
+  height: 0;
+  top: 400vh;
+  top: calc(var(--vh, 1vh) * 400);
+}
+
+.contact_title {
+  font-size: 32px;
+  font-weight: 700;
+  margin: 16px 0;
+  width: 100%;
+}
+
+.contact_form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.form_input {
+  border-radius: 4px;
+  border: 1px solid rgb(200, 200, 200);
+  font-size: 16px;
+  font-weight: 400;
+  height: 48px;
+  margin: 8px 0;
+  outline: none;
+  padding: 8px 16px;
+  width: 100%;
+}
+
+.form_textarea {
+  border-radius: 4px;
+  border: 1px solid rgb(200, 200, 200);
+  font-size: 16px;
+  font-weight: 400;
+  height: 200px;
+  margin: 8px 0;
+  outline: none;
+  padding: 8px 16px;
+  resize: none;
+  width: 100%;
+}
+
+.form_footer_container {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+  width: 100%;
+}
+
+.form_state_text {
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0;
+  text-align: center;
+  width: 30%;
+}
+
+.form_state_btn {
+  align-items: center;
+  border-radius: 4px;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  display: flex;
+  font-size: 16px;
+  height: 48px;
+  justify-content: space-between;
+  outline: none;
+  padding: 4px;
+  transform: translateX(-400%);
+  transition: all 0.3s ease;
+  width: 30%;
+}
+
+.show_state_btn_ok {
+  background: linear-gradient(180deg, rgb(255, 255, 255), rgb(255, 255, 255) 90%, rgb(50, 200, 50) 90%, rgb(50, 200, 50));
+  transform: translateX(0%);
+}
+
+.show_state_btn_error {
+  background: linear-gradient(180deg, rgb(255, 255, 255), rgb(255, 255, 255) 90%, rgb(200, 50, 50) 90%, rgb(200, 50, 50));
+  transform: translateX(0%);
+}
+
+.form_btn {
+  background-color: rgb(255, 255, 255);
+  border-radius: 4px;
+  border: 1px solid rgb(200, 200, 200);
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 700;
+  height: 48px;
+  outline: none;
+  padding: 8px 16px;
+  transition: all 0.3s ease;
+  width: 30%;
+}
+
+/* ----------------------------------------------------------------- IF WIDTH <= 1100 ----------------------------------------------------------------- */
+@media screen and (max-width: 1100px) {
+  /* --------------------------------------------------------------------- FOR ALL -------------------------------------------------------------------- */
+
+  section {
+    align-items: center;
+    height: 60vh;
+    height: calc(var(--vh, 1vh) * 60);
+    justify-content: start;
+    left: 0;
+    margin: 0;
+    max-width: 100%;
+  }
+
+  /* ---------------------------------------------------------------------- NAVBAR ---------------------------------------------------------------------- */
+
+  .navbar {
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+  }
+
+  .nav_logo {
+    margin-left: 4px;
+    height: 20px;
+    width: 20px;
+  }
+
+  .nav_list {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0 auto 0 auto;
+    max-width: 600px;
+    width: 100%;
+  }
+
+  .nav_item {
+    margin: 0 4px;
+  }
+
+  .nav_link {
+    color: rgb(200, 200, 200);
+    font-size: 14px;
+  }
+
+  /* --------------------------------------------------------------- SECTION 1 ( HOME ) --------------------------------------------------------------- */
+
+  #home {
+    justify-content: center;
+  }
+
+  .home_title {
+    font-size: 48px;
+    margin-top: 0;
+  }
+
+  .home_text {
+    font-size: 24px;
+  }
+
+  .home_btn {
+    margin: 0 auto;
+  }
+
+  /* --------------------------------------------------------------- SECTION 2 ( ABOUT ) -------------------------------------------------------------- */
+
+  #about {
+    overflow-y: scroll;
+  }
+
+  /* ------------------------------------------------------------- SECTION 3 ( PROJECTS ) ------------------------------------------------------------- */
+
+  .projects_container {
+    margin: 0 auto;
+    width: 760px;
+  }
+
+  .projects_title {
+    font-size: 40px;
+  }
+
+  .project {
+    flex-direction: column;
+    width: 728px;
+  }
+
+  .project_img {
+    height: 200px;
+    width: 728px;
+  }
+
+  .project_info {
+    width: 728px;
+  }
+
+  .project_title {
+    font-size: 32px;
+  }
+
+  .project_description {
+    font-size: 24px;
+  }
+
+  /* -------------------------------------------------------------- SECTION 4 ( CONTACT ) ------------------------------------------------------------- */
+
+  .contact_form {
+    height: 100%;
+    max-width: 500px;
+    padding: 8px;
+  }
+
+  .contact_title {
+    display: none;
+  }
+
+  .form_input {
+    margin: 4px 0;
+  }
+
+  .form_textarea {
+    display: flex;
+    height: 100%;
+    margin: 4px 0;
+  }
+}
+
+.active {
+  color: rgb(255, 255, 255);
+}
+
+/* ----------------------------------------------------------------- hover, ONLY IN PC ---------------------------------------------------------------- */
+@media (pointer: fine) {
+  .nav_link:hover {
+    color: rgb(209, 209, 209);
+  }
+
+  /* --------------------------------------------------------------- SECTION 1 ( HOME ) --------------------------------------------------------------- */
+
+  .home_btn:hover {
+    background-color: rgb(0, 0, 0);
+    border: 1px solid rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    fill: rgb(255, 255, 255);
+  }
+
+  /* -------------------------------------------------------------- SECTION 2 ( ABOUT ) --------------------------------------------------------------- */
+
+  /* ------------------------------------------------------------- SECTION 3 ( PROJECTS ) ------------------------------------------------------------- */
+
+  .projects_btn:hover {
+    background-color: rgb(0, 0, 0);
+    border: 1px solid rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    fill: rgb(255, 255, 255);
+  }
+
+  .project_link_svg:hover {
+    transform: scale(1.1);
+    color: rgb(0, 0, 0);
+  }
+
+  /* -------------------------------------------------------------- SECTION 4 ( CONTACT ) ------------------------------------------------------------- */
+
+  .form_btn:hover {
+    background-color: rgb(0, 0, 0);
+    border: 1px solid rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+  }
+}
