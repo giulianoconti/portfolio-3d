@@ -402,7 +402,7 @@ export function Model(props) {
           position={[-12.1, 14.79, -180.05]}
           rotation={[-Math.PI, 0, -Math.PI]}
           ref={socialRef.githubRef}
-          onClick={() => window.open("https://github.com/GiuliannT", "_blank")}
+          onClick={() => window.open("https://github.com/giulianoconti", "_blank")}
           onPointerEnter={() => handleColorEnter("github")}
           onPointerLeave={handleColorLeave}
         />

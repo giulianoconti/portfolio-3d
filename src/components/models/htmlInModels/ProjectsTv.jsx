@@ -6,7 +6,7 @@ export const ProjectsTv = () => {
   let prevOrNextSectionRunning = false;
 
   useEffect(() => {
-    fetch("https://giuliannt.github.io/api/myProjects.json")
+    fetch("https://giulianoconti.github.io/api/myProjects-es.json")
       .then((res) => res.json())
       .then((projects) => setProjects(projects));
   }, []);
