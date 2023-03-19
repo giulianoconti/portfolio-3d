@@ -20,4 +20,4 @@ Personal information, practicing with different technologies to have a 3D page.
 
 ### Link
 
-* https://portfolio-3d-giulianoconti.vercel.app
+https://portfolio-3d-giulianoconti.vercel.app
